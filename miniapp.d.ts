@@ -1,22 +1,32 @@
 /**
  * IoT 设备使用的音频编码格式。
- * - `0`: PCMU/G711u 格式。
- * - `8`: PCMA/G711a 格式。
- * - `9`: G722 格式。
  */
 export enum AudioCodec {
+  /**
+   * PCMU/G711u 格式。
+   */
   PCMU = 0,
+  /**
+   * PCMA/G711a 格式。
+   */
   PCMA = 8,
+  /**
+   * G722 格式。
+   */
   G722 = 9,
 }
 
 /**
  * 视频流类型。
- * - `HIGH`: （默认）高分辨率、高码率的视频大流。
- * - `LOW`: 低分辨率、低码率的视频小流。
  */
 export enum StreamType {
+  /**
+   *  （默认）高分辨率、高码率的视频大流。
+   */
   HIGH,
+  /**
+   * 低分辨率、低码率的视频小流。
+   */
   LOW,
 }
 
@@ -25,6 +35,9 @@ export enum StreamType {
  * @note 加解密功能仅在 IoT 场景适用。
  */
 export enum ENCRYPTION_MODE {
+  /**
+   * 0: 不加密。
+   */
   NONE = 0,
   /**
    * 1: 128 位 AES 加密，XTS 模式。
@@ -66,14 +79,19 @@ export enum ENCRYPTION_MODE {
 
 /**
  * 用户 ID 的类型。
- * - INT: （默认）32 位无符号整数。建议设置范围：0 到 (2<sup>32</sup>-1)。默认值为 0。
- * - STRING: 字符串，长度不超过 255 个字符。
  * @note
+ * - 如果设置为整数，则建议的设置范围是 0 到 (2<sup>32</sup>-1)
  * - 使用字符串作为用户 ID 支持与 Native SDK 2.8 及以上版本或 Web SDK 互通。请确保 Native SDK 使用 User Account 加入频道。详见[如何使用 String 型的用户名](https://docs.agora.io/cn/live-streaming-premium-4.x/faq/string)。
  * - 一个频道内的所有用户必须使用同样类型的 uid，即必须都为整数或都为字符串。
  */
 export enum UidType {
+  /**
+   * （默认）32 位无符号整数。默认值为 0。
+   */
   INT,
+  /**
+   * 字符串，长度不超过 255 个字符。
+   */
   STRING,
 }
 
