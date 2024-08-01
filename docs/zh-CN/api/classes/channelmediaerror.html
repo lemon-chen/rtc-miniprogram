@@ -71,7 +71,7 @@
 					<div class="lead">
 						<p>跨频道媒体流转发的错误信息。</p>
 					</div>
-					<p>调用 <a href="../interfaces/client.html#startchannelmediarelay">startChannelMediaRelay</a>、<a href="../interfaces/client.html#updatechannelmediarelay">updateChannelMediaRelay</a> 或 <a href="../interfaces/client.html#stopchannelmediarelay">stopChannelMediaRelay</a> 出错时，会在方法的回调中通过该类提供具体的错误信息。</p>
+					<p>调用 <a href="client.html#startchannelmediarelay">startChannelMediaRelay</a>、<a href="client.html#updatechannelmediarelay">updateChannelMediaRelay</a> 或 <a href="client.html#stopchannelmediarelay">stopChannelMediaRelay</a> 出错时，会在方法的回调中通过该类提供具体的错误信息。</p>
 					<p>该类中 <code>code</code> 表示错误码，<code>message</code> 表示错误名，对应关系如下表所示：</p>
 					<table>
 						<thead>
@@ -124,7 +124,7 @@
 							<tr>
 								<td>8</td>
 								<td>SERVER_CONNECTION_LOST</td>
-								<td>SDK 因网络质量不佳与服务器断开，并且重连失败时抛出这个错。此时 SDK 会重置跨频道媒体流转发的相关状态，可以尝试调用 <a href="../interfaces/client.html#startchannelmediarelay">startChannelMediaRelay</a> 重新进行跨频道媒体流转发。</td>
+								<td>SDK 因网络质量不佳与服务器断开，并且重连失败时抛出这个错。此时 SDK 会重置跨频道媒体流转发的相关状态，可以尝试调用 <a href="client.html#startchannelmediarelay">startChannelMediaRelay</a> 重新进行跨频道媒体流转发。</td>
 							</tr>
 							<tr>
 								<td>9</td>
@@ -144,12 +144,12 @@
 							<tr>
 								<td>12</td>
 								<td>RELAY_ALREADY_START</td>
-								<td>已经开始跨频道媒体流转发。该错误一般是因为重复调用 <a href="../interfaces/client.html#startchannelmediarelay">startChannelMediaRelay</a>，或者在调用 <a href="../interfaces/client.html#stopchannelmediarelay">stopChannelMediaRelay</a> 未成功时就调用了 <a href="../interfaces/client.html#startchannelmediarelay">startChannelMediaRelay</a>。</td>
+								<td>已经开始跨频道媒体流转发。该错误一般是因为重复调用 <a href="client.html#startchannelmediarelay">startChannelMediaRelay</a>，或者在调用 <a href="client.html#stopchannelmediarelay">stopChannelMediaRelay</a> 未成功时就调用了 <a href="client.html#startchannelmediarelay">startChannelMediaRelay</a>。</td>
 							</tr>
 							<tr>
 								<td>13</td>
 								<td>RELAY_NOT_START</td>
-								<td>尚未开始跨频道媒体流转发。该错误一般是因为调用 <a href="../interfaces/client.html#startchannelmediarelay">startChannelMediaRelay</a> 还未成功时就调用了 <a href="../interfaces/client.html#updatechannelmediarelay">updateChannelMediaRelay</a>。</td>
+								<td>尚未开始跨频道媒体流转发。该错误一般是因为调用 <a href="client.html#startchannelmediarelay">startChannelMediaRelay</a> 还未成功时就调用了 <a href="client.html#updatechannelmediarelay">updateChannelMediaRelay</a>。</td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -225,6 +225,9 @@
 						<a href="../enums/audiocodec.html" class="tsd-kind-icon">Audio<wbr>Codec</a>
 					</li>
 					<li class=" tsd-kind-enum">
+						<a href="../enums/encryption_mode.html" class="tsd-kind-icon">ENCRYPTION_<wbr>MODE</a>
+					</li>
+					<li class=" tsd-kind-enum">
 						<a href="../enums/streamtype.html" class="tsd-kind-icon">Stream<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum">
@@ -248,11 +251,11 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface">
-						<a href="../interfaces/channelmediarelayconfiguration.html" class="tsd-kind-icon">Channel<wbr>Media<wbr>Relay<wbr>Configuration</a>
+					<li class=" tsd-kind-class">
+						<a href="client.html" class="tsd-kind-icon">Client</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/client.html" class="tsd-kind-icon">Client</a>
+						<a href="../interfaces/channelmediarelayconfiguration.html" class="tsd-kind-icon">Channel<wbr>Media<wbr>Relay<wbr>Configuration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/log.html" class="tsd-kind-icon">Log</a>
