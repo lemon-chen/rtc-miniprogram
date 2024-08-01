@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>StreamType | 小程序 API 参考</title>
+	<title>ENCRYPTION_MODE | 小程序 API 参考</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="streamtype.html">StreamType</a>
+					<a href="encryption_mode.html">ENCRYPTION_MODE</a>
 				</li>
 			</ul>
-			<h1>Enumeration StreamType</h1>
+			<h1>Enumeration ENCRYPTION_MODE</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>视频流类型。</p>
+						<p>加密模式类型。</p>
 					</div>
 				</div>
 			</section>
@@ -80,8 +80,16 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="streamtype.html#high" class="tsd-kind-icon">HIGH</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="streamtype.html#low" class="tsd-kind-icon">LOW</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#aes_128_ecb" class="tsd-kind-icon">AES_<wbr>128_<wbr>ECB</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#aes_128_gcm" class="tsd-kind-icon">AES_<wbr>128_<wbr>GCM</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#aes_128_gcm2" class="tsd-kind-icon">AES_<wbr>128_<wbr>GCM2</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#aes_128_xts" class="tsd-kind-icon">AES_<wbr>128_<wbr>XTS</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#aes_256_gcm" class="tsd-kind-icon">AES_<wbr>256_<wbr>GCM</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#aes_256_gcm2" class="tsd-kind-icon">AES_<wbr>256_<wbr>GCM2</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#aes_256_xts" class="tsd-kind-icon">AES_<wbr>256_<wbr>XTS</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#mode_end" class="tsd-kind-icon">MODE_<wbr>END</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#none" class="tsd-kind-icon">NONE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="encryption_mode.html#sm4_128_ecb" class="tsd-kind-icon">SM4_<wbr>128_<wbr>ECB</a></li>
 							</ul>
 						</section>
 					</div>
@@ -90,22 +98,97 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="high" class="tsd-anchor"></a>
-					<h3>HIGH</h3>
-					<div class="tsd-signature tsd-kind-icon">HIGH<span class="tsd-signature-symbol">:</span></div>
+					<a name="aes_128_ecb" class="tsd-anchor"></a>
+					<h3>AES_<wbr>128_<wbr>ECB</h3>
+					<div class="tsd-signature tsd-kind-icon">AES_<wbr>128_<wbr>ECB<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 2</span></div>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>（默认）高分辨率、高码率的视频大流。</p>
+							<p>2: 128 位 AES 加密，ECB 模式。</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="low" class="tsd-anchor"></a>
-					<h3>LOW</h3>
-					<div class="tsd-signature tsd-kind-icon">LOW<span class="tsd-signature-symbol">:</span></div>
+					<a name="aes_128_gcm" class="tsd-anchor"></a>
+					<h3>AES_<wbr>128_<wbr>GCM</h3>
+					<div class="tsd-signature tsd-kind-icon">AES_<wbr>128_<wbr>GCM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 5</span></div>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>低分辨率、低码率的视频小流。</p>
+							<p>5: 128 位 AES 加密，GCM 模式。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="aes_128_gcm2" class="tsd-anchor"></a>
+					<h3>AES_<wbr>128_<wbr>GCM2</h3>
+					<div class="tsd-signature tsd-kind-icon">AES_<wbr>128_<wbr>GCM2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 7</span></div>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>7: 默认）128 位 AES 加密，GCM 模式。该加密模式需要设置盐 (<code>encryptionSalt</code>)。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="aes_128_xts" class="tsd-anchor"></a>
+					<h3>AES_<wbr>128_<wbr>XTS</h3>
+					<div class="tsd-signature tsd-kind-icon">AES_<wbr>128_<wbr>XTS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 1</span></div>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>1: 128 位 AES 加密，XTS 模式。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="aes_256_gcm" class="tsd-anchor"></a>
+					<h3>AES_<wbr>256_<wbr>GCM</h3>
+					<div class="tsd-signature tsd-kind-icon">AES_<wbr>256_<wbr>GCM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 6</span></div>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>6: 256 位 AES 加密，GCM 模式。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="aes_256_gcm2" class="tsd-anchor"></a>
+					<h3>AES_<wbr>256_<wbr>GCM2</h3>
+					<div class="tsd-signature tsd-kind-icon">AES_<wbr>256_<wbr>GCM2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 8</span></div>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>8: 256 位 AES 加密，GCM 模式。该加密模式需要设置盐 (<code>encryptionSalt</code>)。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="aes_256_xts" class="tsd-anchor"></a>
+					<h3>AES_<wbr>256_<wbr>XTS</h3>
+					<div class="tsd-signature tsd-kind-icon">AES_<wbr>256_<wbr>XTS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 3</span></div>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>3: 256 位 AES 加密，XTS 模式。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="mode_end" class="tsd-anchor"></a>
+					<h3>MODE_<wbr>END</h3>
+					<div class="tsd-signature tsd-kind-icon">MODE_<wbr>END<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 9</span></div>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>9: 枚举值边界。</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="none" class="tsd-anchor"></a>
+					<h3>NONE</h3>
+					<div class="tsd-signature tsd-kind-icon">NONE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 0</span></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="sm4_128_ecb" class="tsd-anchor"></a>
+					<h3>SM4_<wbr>128_<wbr>ECB</h3>
+					<div class="tsd-signature tsd-kind-icon">SM4_<wbr>128_<wbr>ECB<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 4</span></div>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>4: 128 位 SM4 加密，ECB 模式。</p>
 						</div>
 					</div>
 				</section>
@@ -124,24 +207,48 @@
 					<li class=" tsd-kind-enum">
 						<a href="audiocodec.html" class="tsd-kind-icon">Audio<wbr>Codec</a>
 					</li>
-					<li class=" tsd-kind-enum">
-						<a href="encryption_mode.html" class="tsd-kind-icon">ENCRYPTION_<wbr>MODE</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum">
-						<a href="streamtype.html" class="tsd-kind-icon">Stream<wbr>Type</a>
+						<a href="encryption_mode.html" class="tsd-kind-icon">ENCRYPTION_<wbr>MODE</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="streamtype.html#high" class="tsd-kind-icon">HIGH</a>
+								<a href="encryption_mode.html#aes_128_ecb" class="tsd-kind-icon">AES_<wbr>128_<wbr>ECB</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="streamtype.html#low" class="tsd-kind-icon">LOW</a>
+								<a href="encryption_mode.html#aes_128_gcm" class="tsd-kind-icon">AES_<wbr>128_<wbr>GCM</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="encryption_mode.html#aes_128_gcm2" class="tsd-kind-icon">AES_<wbr>128_<wbr>GCM2</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="encryption_mode.html#aes_128_xts" class="tsd-kind-icon">AES_<wbr>128_<wbr>XTS</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="encryption_mode.html#aes_256_gcm" class="tsd-kind-icon">AES_<wbr>256_<wbr>GCM</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="encryption_mode.html#aes_256_gcm2" class="tsd-kind-icon">AES_<wbr>256_<wbr>GCM2</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="encryption_mode.html#aes_256_xts" class="tsd-kind-icon">AES_<wbr>256_<wbr>XTS</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="encryption_mode.html#mode_end" class="tsd-kind-icon">MODE_<wbr>END</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="encryption_mode.html#none" class="tsd-kind-icon">NONE</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="encryption_mode.html#sm4_128_ecb" class="tsd-kind-icon">SM4_<wbr>128_<wbr>ECB</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-enum">
+						<a href="streamtype.html" class="tsd-kind-icon">Stream<wbr>Type</a>
+					</li>
 					<li class=" tsd-kind-enum">
 						<a href="uidtype.html" class="tsd-kind-icon">Uid<wbr>Type</a>
 					</li>
