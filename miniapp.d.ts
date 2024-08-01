@@ -60,7 +60,7 @@ export enum ENCRYPTION_MODE {
    */
   AES_256_GCM = 6,
   /**
-   * 7: 默认）128 位 AES 加密，GCM 模式。该加密模式需要设置盐 (`encryptionSalt`)。
+   * 7:（默认）128 位 AES 加密，GCM 模式。该加密模式需要设置盐 (`encryptionSalt`)。
    */
   AES_128_GCM2 = 7,
   /**
@@ -104,7 +104,7 @@ export declare class Client {
      */
     encryptionKey?: string;
     /**
-     * 加密盐值。
+     * 加密盐值，长度为 32 字节。
      */
     encryptionSalt?: string;
     /**
