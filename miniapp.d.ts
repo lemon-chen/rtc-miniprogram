@@ -31,48 +31,57 @@ export enum StreamType {
 }
 
 /**
- * 加密模式类型。
- * @note 加解密功能仅在 IoT 场景适用。
+ * 加密模式类型，仅在 IoT 场景适用。
+ * - 0: 不加密
+ * - 1: 128 位 AES 加密，XTS 模式。
+ * - 2: 128 位 AES 加密，ECB 模式。
+ * - 3: 256 位 AES 加密，XTS 模式。
+ * - 4: 128 位 SM4 加密，ECB 模式。
+ * - 5: 128 位 AES 加密，GCM 模式。
+ * - 6: 256 位 AES 加密，GCM 模式。
+ * - 7: （默认）128 位 AES 加密，GCM 模式。该加密模式需要设置盐值 (`encryptionSalt`) 。
+ * - 8: 256 位 AES 加密，GCM 模式。该加密模式需要设置盐值 (`encryptionSalt`) 。
+ * - 9: 枚举值边界。
  */
 export enum ENCRYPTION_MODE {
   /**
-   * 0: 不加密。
+   * 不加密。
    */
   NONE = 0,
   /**
-   * 1: 128 位 AES 加密，XTS 模式。
+   * 128 位 AES 加密，XTS 模式。
    */
   AES_128_XTS = 1,
   /**
-   * 2: 128 位 AES 加密，ECB 模式。
+   * 128 位 AES 加密，ECB 模式。
    */
   AES_128_ECB = 2,
   /**
-   * 3: 256 位 AES 加密，XTS 模式。
+   * 256 位 AES 加密，XTS 模式。
    */
   AES_256_XTS = 3,
   /**
-   * 4: 128 位 SM4 加密，ECB 模式。
+   * 128 位 SM4 加密，ECB 模式。
    */
   SM4_128_ECB = 4,
   /**
-   * 5: 128 位 AES 加密，GCM 模式。
+   * 128 位 AES 加密，GCM 模式。
    */
   AES_128_GCM = 5,
   /**
-   * 6: 256 位 AES 加密，GCM 模式。
+   * 256 位 AES 加密，GCM 模式。
    */
   AES_256_GCM = 6,
   /**
-   * 7:（默认）128 位 AES 加密，GCM 模式。该加密模式需要设置盐值 (`encryptionSalt`) 。
+   * （默认）128 位 AES 加密，GCM 模式。该加密模式需要设置盐值 (`encryptionSalt`) 。
    */
   AES_128_GCM2 = 7,
   /**
-   * 8: 256 位 AES 加密，GCM 模式。该加密模式需要设置盐值 (`encryptionSalt`) 。
+   * 256 位 AES 加密，GCM 模式。该加密模式需要设置盐值 (`encryptionSalt`) 。
    */
   AES_256_GCM2 = 8,
   /**
-   * 9: 枚举值边界。
+   * 枚举值边界。
    */
   MODE_END = 9,
 }
@@ -98,7 +107,8 @@ export enum UidType {
 export declare class Client {
   /**
    * `Client` 类的构造选项。
-   * @note 加解密功能仅在 IoT 场景适用。
+   *
+   * **NOTE**：加解密功能仅在 IoT 场景适用。
    */
   constructor(options: {
     /**
